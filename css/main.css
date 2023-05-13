@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-image: url("../images/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+}
+html p, body p {
+  text-align: justify;
+}
+@media (max-width: 768px) {
+  html input, html div, html p, html footer, html label, html textarea, html button, body input, body div, body p, body footer, body label, body textarea, body button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  html, body {
+    background-image: none;
+  }
+  html.open, body.open {
+    overflow: hidden;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: white;
+  opacity: 0.95;
+}
+@media (max-width: 768px) {
+  .container {
+    opacity: 1;
+  }
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 10px 20px;
+}
+.container header nav .logo img {
+  width: 30%;
+}
+.container header nav .menu {
+  display: flex;
+  gap: 30px;
+}
+.container header nav .menu li {
+  list-style: none;
+}
+.container header nav .menu li a {
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.container header nav .menu li a:hover {
+  color: #c8003e;
+}
+.container header nav .menu li a.active {
+  color: #c8003e;
+}
+.container header nav .menu-burger {
+  display: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.container header nav .menu-burger .menu-burger-icon {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.container header nav .menu-burger .menu-burger-icon::before, .container header nav .menu-burger .menu-burger-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+  transition: transform 0.2s ease-in-out;
+}
+.container header nav .menu-burger .menu-burger-icon::before {
+  top: -6px;
+}
+.container header nav .menu-burger .menu-burger-icon::after {
+  top: 6px;
+}
+.container header nav .menu-burger.open .menu-burger-icon {
+  background: none;
+}
+.container header nav .menu-burger.open .menu-burger-icon::before {
+  transform: translateY(-50%) rotate(45deg);
+  top: 3px;
+  background-color: white;
+}
+.container header nav .menu-burger.open .menu-burger-icon::after {
+  transform: translateY(-50%) rotate(-45deg);
+  top: 3px;
+  background-color: white;
+}
+@media (max-width: 768px) {
+  .container header nav .logo {
+    width: 100%;
+  }
+  .container header nav .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%);
+    gap: 10px;
+  }
+  .container header nav .menu.show {
+    display: flex;
+    height: 100vh;
+    top: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(70, 50, 50, 0.9294117647);
+    padding: 1rem;
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%);
+    z-index: 3;
+    margin: 0;
+  }
+  .container header nav .menu.show li {
+    padding: 1rem;
+  }
+  .container header nav .menu.show li:first-child {
+    margin-top: 40px;
+  }
+  .container header nav .menu.show li a {
+    color: white;
+  }
+  .container header nav .menu-burger {
+    display: block;
+    z-index: 5;
+  }
+}
+.container .main-text {
+  padding: 0 30px;
+}
+.container .slider {
+  position: relative;
+  overflow: hidden;
+}
+.container .slider .slides {
+  display: flex;
+  width: 300%;
+  height: 500px;
+}
+@media (max-width: 768px) {
+  .container .slider .slides {
+    height: 190px;
+  }
+}
+.container .slider .slides img {
+  width: 100%;
+}
+.container .slider .controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.container .slider .controls button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.container .slider .controls button:focus {
+  outline: none;
+}
+.container .slider .controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.container footer p {
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,66 @@
+main {
+  padding: 10px 30px;
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+
+    .card {
+      background-color: white;
+      color: rgba(0, 0, 0, 0.87);
+      border-radius: 4px;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+      overflow: hidden;
+      width: 33%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+
+      .card-image-wrapper {
+        overflow: hidden;
+
+        div {
+          display: block;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          height: 465px;
+          overflow: hidden;
+          transition: 0.5s ease-in-out;
+
+          @media (max-width: 768px) {
+            height: 405px;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &:nth-child(1) .card-image-wrapper div {
+        background-image: url("../images/card1.jpg");
+      }
+
+      &:nth-child(2) .card-image-wrapper div {
+        background-image: url("../images/card2.jpg");
+      }
+
+      &:nth-child(3) .card-image-wrapper div {
+        background-image: url("../images/card3.jpg");
+      }
+
+      .card-description {
+        padding: 16px;
+      }
+    }
+  }
+
+}

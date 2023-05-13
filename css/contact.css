@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  align-items: center;
+}
+main .form-container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+main .form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .form-container form input, main .form-container form textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+main .form-container form button {
+  background-color: #c8003e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+main .form-container form button:hover {
+  background-color: #000000;
+}
+@media (max-width: 768px) {
+  main .form-container {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */
